@@ -1,22 +1,22 @@
 # Outputs for DynamoDB Tables
 output "transactions_table_name" {
   description = "Name of the DynamoDB Transactions Table"
-  value       = aws_dynamodb_table.transactions_table.name
+  value       = data.aws_dynamodb_table.transactions_table.name
 }
 
 output "audit_trail_table_name" {
   description = "Name of the DynamoDB Audit Trail Table"
-  value       = aws_dynamodb_table.audit_trail_table.name
+  value       = data.aws_dynamodb_table.audit_trail_table.name
 }
 
 output "transactions_table_arn" {
   description = "ARN of the DynamoDB Transactions Table"
-  value       = aws_dynamodb_table.transactions_table.arn
+  value       = data.aws_dynamodb_table.transactions_table.arn
 }
 
 output "audit_trail_table_arn" {
   description = "ARN of the DynamoDB Audit Trail Table"
-  value       = aws_dynamodb_table.audit_trail_table.arn
+  value       = data.aws_dynamodb_table.audit_trail_table.arn
 }
 
 # Outputs for Lambda Functions
