@@ -5,9 +5,9 @@ resource "aws_lambda_function" "process_void_transaction" {
   handler       = "process_void_transaction.lambda_handler"
   role          = aws_iam_role.process_void_role.arn
 
-  filename      = "lambda_function/process_void_transaction.zip"
+  filename = "lambda_function/process_void_transaction.zip"
 
-  timeout       = 30  # Timeout in seconds
+  timeout = 30 # Timeout in seconds
 
   environment {
     variables = {

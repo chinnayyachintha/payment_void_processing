@@ -35,7 +35,7 @@ resource "aws_iam_policy" "process_void_policy" {
         ],
         Resource = [
           data.aws_dynamodb_table.transactions_table.arn,
-          data.aws_dynamodb_table.audit_trail_table.arn  # Include the audit_trail_table
+          data.aws_dynamodb_table.audit_trail_table.arn # Include the audit_trail_table
         ]
       },
       {
@@ -43,7 +43,7 @@ resource "aws_iam_policy" "process_void_policy" {
         Action = [
           "sqs:SendMessage"
         ],
-        Resource = aws_sqs_queue.audit_trail_fifo_queue.arn  # Ensure this is the correct SQS FIFO Queue ARN
+        Resource = aws_sqs_queue.audit_trail_fifo_queue.arn # Ensure this is the correct SQS FIFO Queue ARN
       },
       {
         Effect = "Allow",
